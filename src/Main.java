@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello!");
         System.out.println("Bogdan");
-        System.out.println(10+38);
+        System.out.println(11+38);
         float x= 10;
         float y= 3;
         System.out.println(x/y);

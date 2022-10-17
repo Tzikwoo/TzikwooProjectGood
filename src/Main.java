@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Print Tema1 = new Print();
+        /*Print Tema1 = new Print();
         Tema1.printMyName();
         Tema1.printAdunare(11, 38);
         Tema1.printImpartire(10, 3);
@@ -14,7 +14,7 @@ public class Main {
         int c = 8;
         System.out.println("Rezultatul adunarii nr. " + a + " cu " + b + " este " + calc.sum(a, b));
         System.out.println("Rezultatul inmultirii nr. " + a + " cu " + b + " este " + calc.multiply(a, b));
-        System.out.println("Rezultatul impartrii nr. " + b + " cu " + a + " este " + calc.divide(b, a));
+        System.out.println("Rezultatul impartirii nr. " + b + " cu " + a + " este " + calc.divide(b, a));
         System.out.println("Rezultatul scaderii nr. " + a + " cu " + b + " este " + calc.dif(a,b));
         System.out.println("Media nr. " + a + ", " + b + " , " + c + " este " + calc.media(a, b, c) );
         System.out.println("Restul impartirii nr. " + a + " cu " + b + " este " + calc.modulo(a, b));
@@ -26,10 +26,13 @@ public class Main {
         System.out.println(a + " grade Fahrenheit sunt " + conv.temperatura(a) + " grade Celsius.");
         System.out.println(b + " inch reprezinta " + conv.inch(b) + " metri.");
         float distanta= 35000;
-        float ore= 3;
-        float minute= 180;
-        float secunde= 10800;
-        conv.viteza(distanta, ore, minute, secunde);
+        float ore= 1;
+        float minute= 30;
+        float secunde= 3600;
+        conv.viteza(distanta, ore, minute, secunde);*/
+        Logical op = new Logical();
+        String textInput= "FasstTrack";
+        op.Prima(textInput);
     }
 
 

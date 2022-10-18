@@ -30,11 +30,24 @@ public class Main {
         float minute= 30;
         float secunde= 3600;
         conv.viteza(distanta, ore, minute, secunde);*/
-        Logical op = new Logical();
-        String textInput= "FasstTrack";
-        op.Prima(textInput);
+
+
+
+        LogicalOp op = new LogicalOp();
+        String textInput= "FastTrackI";
+        op.checkText(textInput);
+        int x=10;
+        int y= 8;
+        int z = 11;
+        System.out.println("The bigger number between " + x + " and " + y + " is " + op.checkBiggerNumber(x,y));
+        op.punct5(textInput, x);
+        op.punct6(y);
+        op.punct7(x);
+        op.punct8(x);
+        System.out.println("Is the number even? " + op.isNumberEven(x));
+        System.out.println("Is the person eligible to vote? " + op.isEligibleToVote(y));
+        System.out.println("Cel mai mare dintre cele 3 numere introduse este: " + op.punct11(x,y,z));
+
+
     }
-
-
-
 }

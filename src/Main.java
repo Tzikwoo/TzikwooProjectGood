@@ -48,30 +48,46 @@ public class Main {
         System.out.println("Is the number even? " + op.isNumberEven(x));
         System.out.println("Is the person eligible to vote? " + op.isEligibleToVote(y));
         System.out.println("Cel mai mare dintre cele 3 numere introduse este: " + op.punct11(x,y,z));*/
-        //Tema for - loops
+        //Tema for - loops.
         LogicalOp op= new LogicalOp();
         int n= 91;
-        int x= 15;
-        int y= 10;
+        int x= 13;
+        int y= 20;
         int stele=8;
         System.out.println("Primul exercitiu: ");
-        op.Ex1(n);
+        op.For1(n);
         System.out.println("Al doilea exercitiu: ");
-        op.Ex2(n);
-        System.out.println("Al treilea exerccitiu: ");
-        op.Ex3(x,y);
+        op.For2(n);
+        System.out.println("Al treilea exercitiu: ");
+        op.For3(x,y);
         System.out.println("Al patrulea exercitiu: ");
-        op.Ex4(x,y);
+        op.For4(x,y);
         System.out.println("Al cincilea exercitiu: ");
-        op.Ex5();
+        op.For5();
         System.out.println("Al saselea exercitiu: ");
-        op.Ex6();
+        op.For6();
         System.out.println("Al saptelea exercitiu: ");
-        System.out.println("Suma nr. de la %s la 100 este %s".formatted(n,op.Ex7(n)));
+        System.out.println("Suma nr. de la %s la 100 este %s".formatted(n,op.For7(n)));
         System.out.println("Al optulea exercitiu: ");
-        System.out.println("Media nr. de la %s la 100 este %s".formatted(n,op.Ex8(n)));
+        System.out.println("Media nr. de la %s la 100 este %s".formatted(n,op.For8(n)));
         System.out.println("Al noualea exercitiu: ");
-        op.Ex9(stele); //Pentru acest exercitiu am folosit o variabila care sa arate nr. dorit de * de la care sa inceapa in loc de nr. fix de 7 cerut in cerinta.
+        op.For9(stele); //Pentru acest exercitiu am folosit o variabila care sa arate nr. dorit de * de la care sa inceapa in loc de nr. fix de 7 cerut in cerinta.
+
+        //Tema - while loops.
+        op.While1(n);
+        op.While2(n);
+        op.While3(x,y);
+        op.While4(y,x);
+        op.While5();
+        op.While6();
+        op.While7();
+        int a = 10;
+        int b = 21;
+        System.out.println("Media nr. divizibile cu 7 din intervalul %s -> %s este %s".formatted(a,b,op.While8(a,b)));
+        int Fibonacci = 22;
+        op.While9(Fibonacci); //Pentru exercitiul asta am facut in asa fel incat sa se afiseze primele n nr. din sirul lui Fibonacci, nu doar primele 20.
+        System.out.println();
+        op.CozaWozaLoza();
         }
         }
 

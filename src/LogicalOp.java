@@ -1,5 +1,5 @@
 public class LogicalOp {
-   public int checkBiggerNumber (int first, int second){
+   /*public int checkBiggerNumber (int first, int second){
        if (first>second) {
            return first;
        }
@@ -108,7 +108,89 @@ public class LogicalOp {
 
        return result;
            }
-       }
+
+    */
+    public void Ex1(int n){
+        int i;
+        for (i=n;i<=100;i++){
+            System.out.println(i);
+        }
+    }
+    public void Ex2(int n){
+        int i;
+        for (i=n;i>=-100;i--){
+            System.out.println(i);
+        }
+
+        }
+        public void Ex3(int x, int y){
+        int i;
+        for (i=x;i<=y;i++){
+            System.out.println(i);
+        }
+        }
+        public void Ex4(int x, int y){
+        int i;
+        if (x>y) {
+            for (i = y; i <= x; i++) {
+                System.out.println(i);
+            }
+        }
+            else {
+                for (i=x; i<=y;i++){
+                    System.out.println(i);
+                }
+            }
+        }
+        public void Ex5(){
+        int i;
+        for (i=1;i<=100;i++){
+            if (i % 2 == 0){
+                System.out.println(i);
+            }
+        }
+        }
+        public void Ex6(){
+        int i;
+        for (i=1;i<=100;i++){
+            if (i % 2 == 1){
+                System.out.println(i);
+            }
+        }
+        }
+        public int Ex7(int n){
+        int i;
+        int sum = 0;
+        for (i=n;i<=100;i++){
+            sum+=i;
+        }
+        return sum;
+        }
+        public float Ex8(int n){
+        int i;
+        int sum = 0;
+        int count = 0;
+        float media = 0;
+        for (i=n;i<=100;i++){
+            sum+=i;
+            count++;
+        }
+        return (float) sum/count;
+        }
+        public void Ex9(int n)
+        {
+        int i;
+        int j;
+        for (i=1;i<=n;i++){
+            for (j=n;j>=i;j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        }
+        }
+
+
 
 
 

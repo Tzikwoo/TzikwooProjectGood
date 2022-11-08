@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class LogicalOp {
     /*public int checkBiggerNumber (int first, int second){
         if (first>second) {
@@ -111,7 +113,7 @@ public class LogicalOp {
 
      */
     //For loops.
-    public void For1(int n) {
+    /*public void For1(int n) {
         int i;
         for (i = n; i <= 100; i++) {
             System.out.println(i);
@@ -194,9 +196,9 @@ public class LogicalOp {
             System.out.println();
         }
     }
-
+*/
     //While loops.
-
+    /*
     public void While1(int n) {
         while (n <= 100) {
             System.out.println(n);
@@ -282,7 +284,7 @@ public class LogicalOp {
         int a = 0;
         int b = 1;
         int i = 3;
-        int c = 0;
+        int c = -0;
         System.out.print(a + " ");
         System.out.print(b + " ");
         while (i <= n) {
@@ -326,9 +328,96 @@ public class LogicalOp {
             }
             i++;
         }
-
+*/
+    //Arrays
+    public void buildArray(){
+        int[] array = new int[100];
+        for (int i = 0; i < array.length; i++){
+            array[i] = i+1;
+            System.out.print(array[i] + " ");
+        }
+    }
+    public int[] buildArrayEven(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i*2 + 2;
+        }
+        return array;
+    }
+        public void printArray(int[] array){
+        for (int i = 0; i< array.length; i++){
+            System.out.print(array[i] + " ");
+        }
+        }
+        public float averageArray(int[] array){
+        float sum = 0;
+        for (int i = 0; i< array.length; i++){
+            sum += array[i];
+        }
+        return sum/array.length;
+        }
+        public boolean checkString(String[] array, String value){
+        for (int i = 0; i< array.length; i++){
+            if (array[i].equals(value)){
+                return true;
             }
         }
+        return false;
+        }
+        public int checkNumber(int[] array, int value){
+        for (int i=0; i< array.length; i++){
+            if (array[i] == value){
+                return i;
+            }
+        }
+        return -1;
+        }
+        public String[] popularelinii(String[] array){
+        for (int i = 0; i< array.length; i++){
+            array[i]="-";
+        }
+        return array;
+        }
+        public void afisarelinii(String[] array, int nrlinii){
+        for (int i = 1; i<= nrlinii; i++){
+            for (int j = 0; j<array.length; j++ ){
+                System.out.print(array[j] + " ");
+            }
+            System.out.println();
+        }
+        }
+        public int[] removeNrFromArray (int[] inarray, int nr){
+        int[] outarray = new int[inarray.length-1];
+        int l = 0;
+        for (int i = 0; i< inarray.length; i++) {
+            if (inarray[i]!= nr){
+                outarray[l] = inarray[i];
+                l++;
+            }
+        }
+        return outarray;
+        }
+        public int secondSmallest (int[] array){
+        int smallest = Integer.MAX_VALUE;
+        int secondsmallest = Integer.MAX_VALUE;
+        for (int i = 0; i< array.length; i++){
+            if (array[i]<smallest){
+                secondsmallest = smallest;
+                smallest = array[i];
+            }
+            if (array[i]<secondsmallest && array[i] !=smallest){
+                secondsmallest = array[i];
+            }
+            }
+        return secondsmallest;
+        }
+        public int[] copyArray(int[] inarray, int[] outarray){
+        for (int i= 0; i<inarray.length; i++){
+            outarray[i] = inarray[i];
+        }
+        return outarray;
+        }
+    }
+
 
 
 

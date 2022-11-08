@@ -36,7 +36,7 @@ public class AppMain {
         System.out.println("Recreation name: " + recreation1.getName());
         Vet vet1= new Vet();
         vet1.setName("Dr. Ioan Pop");
-        vet1.setSpecialisation("Chirurgie");
+        vet1.setSpecialisation("Surgeon");
         System.out.println("Veterinary: " + vet1.getName());
         System.out.println("Specialisation: " + vet1.getSpecialisation());
 

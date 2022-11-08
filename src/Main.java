@@ -1,4 +1,5 @@
-
+import javax.swing.*;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -49,7 +50,7 @@ public class Main {
         System.out.println("Is the person eligible to vote? " + op.isEligibleToVote(y));
         System.out.println("Cel mai mare dintre cele 3 numere introduse este: " + op.punct11(x,y,z));*/
         //Tema for - loops.
-        LogicalOp op= new LogicalOp();
+        /*LogicalOp op= new LogicalOp();
         int n= 91;
         int x= 13;
         int y= 20;
@@ -71,10 +72,11 @@ public class Main {
         System.out.println("Al optulea exercitiu: ");
         System.out.println("Media nr. de la %s la 100 este %s".formatted(n,op.For8(n)));
         System.out.println("Al noualea exercitiu: ");
-        op.For9(stele); //Pentru acest exercitiu am folosit o variabila care sa arate nr. dorit de * de la care sa inceapa in loc de nr. fix de 7 cerut in cerinta.
-
+        op.For9(stele); //Pentru acest exercitiu am folosit o variabila care sa arate nr. dorit de * de la care sa inceapa in loc de nr. fix de 7
+        // cerut in cerinta.
+ */
         //Tema - while loops.
-        op.While1(n);
+        /* op.While1(n);
         op.While2(n);
         op.While3(x,y);
         op.While4(y,x);
@@ -85,9 +87,82 @@ public class Main {
         int b = 21;
         System.out.println("Media nr. divizibile cu 7 din intervalul %s -> %s este %s".formatted(a,b,op.While8(a,b)));
         int Fibonacci = 22;
-        op.While9(Fibonacci); //Pentru exercitiul asta am facut in asa fel incat sa se afiseze primele n nr. din sirul lui Fibonacci, nu doar primele 20.
+        op.While9(Fibonacci); //Pentru exercitiul asta am facut in asa fel incat sa se afiseze primele n nr. din sirul lui Fibonacci,
+        // nu doar primele 20.
         System.out.println();
         op.CozaWozaLoza();
+         */
+        //Tema - polimorfism;
+        Calculator calc= new Calculator();
+        System.out.println("Adunari");
+        System.out.println(calc.sum(1,2));
+        System.out.println(calc.sum(1,2,3, 4));
+        System.out.println(calc.sum(1.5, 2.3, 3.6));
+        System.out.println("Diferente");
+        System.out.println(calc.dif(1,2));
+        System.out.println(calc.dif(1,2,3));
+        System.out.println(calc.dif(3.5,2.3,6.7));
+        System.out.println("Inmultiri");
+        System.out.println(calc.multiply(2,3));
+        System.out.println(calc.multiply(2,3,4));
+        System.out.println(calc.multiply(2.3,0.5,0.3));
+        System.out.println("Impartiri");
+        System.out.println(calc.divide(5,2));
+        System.out.println(calc.divide(7, 3.5, 0.5));
+        System.out.println("Medii");
+        System.out.println(calc.media(3,4,6));
+        System.out.println(calc.media(1.3, 2.7, 2.0, 0.4));
+        System.out.println("Modulo");
+        System.out.println(calc.modulo(2,5));
+        System.out.println(calc.modulo(3.5, 0.8, 1.3));
+        //Tema - array
+        System.out.println("Arrays");
+        LogicalOp op = new LogicalOp();
+        op.buildArray();
+        System.out.println();
+        int[] sir = new int[50];
+        sir = op.buildArrayEven(sir);
+        op.printArray(sir);
+        System.out.println();
+        System.out.println("The array's average is " + op.averageArray(sir));
+        String[] arrayString = {"Se", "Cauta", "cauta", "la", " cat", " cat ", "mai", "multe", " stringuri"};
+        String variabila = " cat";
+        System.out.println("Is the desired String in the array of Strings? " + op.checkString(arrayString,variabila));
+
+        int nr = 4;
+        if (op.checkNumber(sir, nr) == -1) {
+            System.out.println("The desired number isn't in the specified array of numbers.");
+        }
+            else{
+                System.out.println("The desired number is in the specified array of numbers at index %s".formatted(op.checkNumber(sir, nr)));
+            }
+
+
+            String[] arraylinii = new String[10];
+            arraylinii = op.popularelinii(arraylinii);
+            op.afisarelinii(arraylinii, 10); //Pentru acest exercitiu am facut in asa fel incat sa se afiseze nr. dorit de linii cu minusuri,
+        // in loc de nr. specificat de 10.
+
+        int[] inarray = {1,12,255,68,99,133,44,7,18,29,30,11,38};
+        int wantedNr= 30;
+        int[] outarray = new int[inarray.length - 1];
+        outarray = op.removeNrFromArray(inarray, wantedNr);
+        op.printArray(outarray);
+        System.out.println();
+
+        int secondsmallest = op.secondSmallest(inarray);
+        System.out.print("Al doilea cel mai mic nr. din sirul ");
+        op.printArray(inarray);
+        System.out.println("este " + op.secondSmallest(inarray));
+        //Pentru exercitiul de mai sus am incercat sa folosesc si metoda predefinita sort,
+        // care imi ordoneza crescator sirul astfel ca a doua cea mai mica valoare din acest array va fi mereu pe pozitia array[1].
+        Arrays.sort(inarray);
+        System.out.println("Al doilea cel mai mic nr. din sir este %s ".formatted(inarray[1]));
+
+        int[] fullArray ={1,3,7,9,10,11,38};
+        int[] emptyArray = new int[7];
+        emptyArray = op.copyArray(fullArray, emptyArray);
+        op.printArray(emptyArray);
         }
         }
 

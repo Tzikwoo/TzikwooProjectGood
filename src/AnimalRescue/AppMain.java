@@ -2,7 +2,7 @@ package AnimalRescue;
 
 public class AppMain {
     public static void main(String[] args) {
-        Animal dog1 = new Animal();
+        Dog dog1 = new Dog();
         dog1.setName("Cody");
         dog1.setAge(3);
         dog1.setFavfood("Purina");
@@ -17,6 +17,7 @@ public class AppMain {
         System.out.println("The dog's health level is " + dog1.getHealth());
         System.out.println("The dog's hungriness level is " + dog1.getHungriness());
         System.out.println("The dog's spirit level is " + dog1.getSpirit());
+        dog1.bark();
         Rescuer adoptator1 = new Rescuer();
         adoptator1.setName("Bogdan");
         adoptator1.setMoney(300.5);

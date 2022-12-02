@@ -1,5 +1,7 @@
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -93,7 +95,7 @@ public class Main {
         op.CozaWozaLoza();
          */
         //Tema - polimorfism;
-        Calculator calc= new Calculator();
+        /*Calculator calc= new Calculator();
         System.out.println("Adunari");
         System.out.println(calc.sum(1,2));
         System.out.println(calc.sum(1,2,3, 4));
@@ -163,6 +165,41 @@ public class Main {
         int[] emptyArray = new int[7];
         emptyArray = op.copyArray(fullArray, emptyArray);
         op.printArray(emptyArray);
+        */
+        //Tema - liste;
+        List<Integer> IntegerList = new ArrayList<>();
+        IntegerList.add(11);
+        IntegerList.add(38);
+        IntegerList.add(30);
+        IntegerList.add(7);
+        Liste liste = new Liste();
+        System.out.println("Primul exercitiu: ");
+        liste.writeIntegerList(IntegerList);
+        IntegerList = liste.insertInList(IntegerList, 19);
+        System.out.println("Al doilea exercitiu: ");
+        liste.writeIntegerList(IntegerList);
+        System.out.println("Al treilea exercitiu: ");
+        liste.writeListFromNumber(IntegerList, 2);
+        System.out.println("Al patrulea exercitiu: ");
+        liste.writeListVersa(IntegerList);
+        List<String> StringList = new ArrayList<>();
+        StringList.add("First");
+        StringList.add("Secundo");
+        StringList.add("Tresa");
+        StringList = liste.insertStringInList(StringList, 1, "Alalalal");
+        System.out.println("Al cincilea exercitiu: ");
+        liste.writeIStringList(StringList);
+        IntegerList = liste.insertToFirst(IntegerList, 0);
+        System.out.println("Al saselea exercitiu: ");
+        liste.writeIntegerList(IntegerList);
+        System.out.println("Al saptelea exercitiu: ");
+        liste.writeValuePosition(IntegerList);
+        int biggest = liste.biggestInList(IntegerList);
+        System.out.println("Al optulea exercitiu: ");
+        System.out.println(biggest);
+        //Try - Catch
+        /*Read read = new Read();
+        System.out.println("Valoarea introdusa este: " + read.getDouble());*/
         }
         }
 

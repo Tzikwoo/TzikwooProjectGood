@@ -167,7 +167,7 @@ public class Main {
         op.printArray(emptyArray);
         */
         //Tema - liste;
-        List<Integer> IntegerList = new ArrayList<>();
+        /*List<Integer> IntegerList = new ArrayList<>();
         IntegerList.add(11);
         IntegerList.add(38);
         IntegerList.add(30);
@@ -196,7 +196,32 @@ public class Main {
         liste.writeValuePosition(IntegerList);
         int biggest = liste.biggestInList(IntegerList);
         System.out.println("Al optulea exercitiu: ");
-        System.out.println(biggest);
+        System.out.println(biggest);*/
+        //Tema optionala liste.
+        Liste liste = new Liste();
+        List<Integer> OptionalList = new ArrayList<>();
+        OptionalList.add(1);
+        OptionalList.add(2);
+        OptionalList.add(18);
+        OptionalList.add(22);
+        OptionalList.add(9);
+        OptionalList = liste.changePositions(OptionalList, 1, 3);
+        System.out.println("Optional 1: ");
+        liste.writeIntegerList(OptionalList);
+        List<Integer> evenList = new ArrayList<>();
+        evenList = liste.evenList(OptionalList);
+        System.out.println("Optional 2: ");
+        liste.writeIntegerList(evenList);
+        List<Integer> sortedList = new ArrayList<>();
+        sortedList.add(13);
+        sortedList.add(3);
+        sortedList.add(21);
+        sortedList.add(7);
+        sortedList.add(144);
+        sortedList.add(0);
+        sortedList = liste.sortList(sortedList);
+        System.out.println("Optional 3: ");
+        liste.writeIntegerList(sortedList);
         //Try - Catch
         /*Read read = new Read();
         System.out.println("Valoarea introdusa este: " + read.getDouble());*/

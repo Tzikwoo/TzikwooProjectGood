@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -43,5 +44,41 @@ public class Liste {
     public int biggestInList (List<Integer> myList){
         Collections.sort(myList);
         return myList.get(myList.size()-1);
+    }
+    public List<Integer> changePositions (List<Integer> myList, int position1, int position2){
+        myList.add(0, myList.get(position1));
+        myList.set(position1+1, myList.get(position2+1));
+        myList.set(position2+1, myList.get(0));
+        myList.remove(0);
+        return myList;
+    }
+    public List<Integer> evenList (List<Integer> myList){
+        List<Integer> outList = new ArrayList<>();
+        int pozout = 0;
+        for (int i = 0; i<myList.size(); i++){
+            if (myList.get(i) % 2 == 0) {
+                outList.add(pozout,myList.get(i));
+                pozout++;
+            }
+        }
+        return outList;
+    }
+    //Scrieti o metoda Java care sa primeasca parametru o Lista nesortata, si sa returneze Lista sortata crescator.
+    //Atentie, sortarea sa se faca programatic(adica logica sa fie scrisa de voi), si nu folosit librarie externa, precum Collection.sort().
+    public List<Integer> sortList (List<Integer> myList) {
+        int nri = 0;
+        int nrj = 0;
+        for (int i = 0; i < myList.size(); i++) {
+            for (int j = i + 1; j < myList.size(); j++) {
+                nri = myList.get(i);
+                nrj = myList.get(j);
+                if (nri > nrj) {
+                    myList.set(i, nrj);
+                    myList.set(j, nri);
+                }
+            }
+
+        }
+        return myList;
     }
 }

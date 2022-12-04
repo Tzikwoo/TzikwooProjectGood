@@ -198,7 +198,7 @@ public class Main {
         System.out.println("Al optulea exercitiu: ");
         System.out.println(biggest);*/
         //Tema optionala liste.
-        Liste liste = new Liste();
+        /*Liste liste = new Liste();
         List<Integer> OptionalList = new ArrayList<>();
         OptionalList.add(1);
         OptionalList.add(2);
@@ -221,10 +221,25 @@ public class Main {
         sortedList.add(0);
         sortedList = liste.sortList(sortedList);
         System.out.println("Optional 3: ");
-        liste.writeIntegerList(sortedList);
+        liste.writeIntegerList(sortedList);*/
         //Try - Catch
-        /*Read read = new Read();
-        System.out.println("Valoarea introdusa este: " + read.getDouble());*/
+        Read read = new Read();
+        LogicalOp op = new LogicalOp();
+        Liste liste = new Liste();
+        int length = 3;
+        System.out.println("Valoarea introdusa intreaga este: " + read.getInt());
+        System.out.println("Valoarea introdusa reala este: " + read.getDouble());
+        System.out.println("Valori pentru sir: ");
+        int [] writeArray = read.getArrayFromKeyboard(length);
+        System.out.print("Sirul este: ");
+        op.printArray(writeArray);
+        System.out.println();
+        List<Integer> writeList = new ArrayList<>();
+        writeList = read.getListFromKeyboard();
+        System.out.println("Lista este: ");
+        liste.writeIntegerList(writeList);
+        op.writeValueFromPosition(writeArray, 2);
+        op.wait(5);
         }
         }
 

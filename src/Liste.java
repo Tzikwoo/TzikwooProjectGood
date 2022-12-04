@@ -63,8 +63,6 @@ public class Liste {
         }
         return outList;
     }
-    //Scrieti o metoda Java care sa primeasca parametru o Lista nesortata, si sa returneze Lista sortata crescator.
-    //Atentie, sortarea sa se faca programatic(adica logica sa fie scrisa de voi), si nu folosit librarie externa, precum Collection.sort().
     public List<Integer> sortList (List<Integer> myList) {
         int nri = 0;
         int nrj = 0;

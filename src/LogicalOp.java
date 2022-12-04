@@ -416,6 +416,20 @@ public class LogicalOp {
         }
         return outarray;
         }
+    public void writeValueFromPosition(int[] myArray, int position) {
+        try {
+            System.out.println("Valoarea din sir de pe pozitia " + position + " este: " + myArray[position]);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Inside catch, number too large.");
+        }
+    }
+    public void wait(int numberOfSeconds){
+        try {
+            Thread.sleep(numberOfSeconds * 1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
     }
 
 

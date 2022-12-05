@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class LogicalOp {
     /*public int checkBiggerNumber (int first, int second){
@@ -330,6 +332,15 @@ public class LogicalOp {
         }
 */
     //Arrays
+    public int[] buildArrayFromKeyboard(int lungime){
+        Scanner scan = new Scanner(System.in);
+        int [] outArray = new int[lungime];
+        System.out.println("Introduceti valori pentru sir: ");
+            for (int i = 0; i < lungime; i++) {
+                outArray[i] = scan.nextInt();
+            }
+        return outArray;
+    }
     public void buildArray(){
         int[] array = new int[100];
         for (int i = 0; i < array.length; i++){
@@ -344,6 +355,7 @@ public class LogicalOp {
         return array;
     }
         public void printArray(int[] array){
+            System.out.print("Sirul este: ");
         for (int i = 0; i< array.length; i++){
             System.out.print(array[i] + " ");
         }

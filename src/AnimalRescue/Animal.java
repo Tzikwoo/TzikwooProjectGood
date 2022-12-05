@@ -1,6 +1,6 @@
 package AnimalRescue;
 
-public class Animal {
+public abstract class Animal {
     private String name;
     public void setName(String name) {
         this.name = name;
@@ -50,11 +50,8 @@ public class Animal {
     public String getFavrecreation(){
         return favrecreation;
     }
-    public void sleep(){
-        System.out.println("Zzz Zzz Zzz");
-    }
-    public void eat(){
-        System.out.println("Nom Nom Nom");
-    }
+    public abstract void sleep();
+    public abstract void eat();
+    public abstract void run();
 
 }
